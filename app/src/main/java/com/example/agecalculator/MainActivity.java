@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         //formatter for birthday
         SimpleDateFormat birthdayFormat = new SimpleDateFormat("MM-dd-yyyy");
 
+        //set up the code that will execute when the Calculate Age button is clicked
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,12 +48,14 @@ public class MainActivity extends AppCompatActivity {
                 String firstName = firstnameEditText.getText().toString();
                 String lastName = lastnameEditText.getText().toString();
                 String birthdayString = birthdayEditText.getText().toString();
+                //Check if the user left any fields empty, and throw an error toast if so
                 if(firstName.isEmpty() || lastName.isEmpty() || birthdayString.isEmpty()){
                     Toast toast = Toast.makeText(mainContext, "All fields need to be filled out.",Toast.LENGTH_SHORT);
                     toast.show();
                     return;
                 }
                 try {
+                    //Parse the user's birthday, if an exception is thrown an error toast is displayed
                     Date birthday = birthdayFormat.parse(birthdayString);
                     Date today = Calendar.getInstance().getTime();
                     long dateDifference = today.getTime() - birthday.getTime();

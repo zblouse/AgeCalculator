@@ -9,6 +9,7 @@
     android:paddingRight="10dp"
     android:background="@color/white"
     tools:context=".MainActivity">
+    <!--Age Calculator label-->
     <TextView
         android:id="@+id/pagelabel"
         android:layout_width="match_parent"
@@ -17,6 +18,7 @@
         android:textSize="42sp"
         android:gravity="center_horizontal"
     />
+    <!--First Name Text Entry Field-->
     <EditText
         android:id="@+id/firstname"
         android:hint="First Name"
@@ -26,6 +28,7 @@
         android:textColor="@color/black"
         android:layout_below="@id/pagelabel"
     />
+    <!--Last Name Text Entry Field-->
     <EditText
         android:id="@+id/lastname"
         android:hint="Last Name"
@@ -35,6 +38,7 @@
         android:inputType="text"
         android:textColor="@color/black"
     />
+    <!--Birthday Text Entry Field-->
     <EditText
         android:id="@+id/birthday"
         android:hint="Birth day mm-dd-yyyy"
@@ -44,6 +48,7 @@
         android:inputType="text"
         android:textColor="@color/black"
     />
+    <!--Calculate Age Button-->
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
