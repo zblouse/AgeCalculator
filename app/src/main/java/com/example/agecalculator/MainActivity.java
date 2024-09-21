@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
                 String firstName = firstnameEditText.getText().toString();
                 String lastName = lastnameEditText.getText().toString();
                 String birthdayString = birthdayEditText.getText().toString();
+                if(firstName.isEmpty() || lastName.isEmpty() || birthdayString.isEmpty()){
+                    Toast toast = Toast.makeText(mainContext, "All fields need to be filled out.",Toast.LENGTH_SHORT);
+                    toast.show();
+                }
                 try {
                     Date birthday = birthdayFormat.parse(birthdayString);
                     Date today = Calendar.getInstance().getTime();
