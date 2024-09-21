@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 if(firstName.isEmpty() || lastName.isEmpty() || birthdayString.isEmpty()){
                     Toast toast = Toast.makeText(mainContext, "All fields need to be filled out.",Toast.LENGTH_SHORT);
                     toast.show();
+                    return;
                 }
                 try {
                     Date birthday = birthdayFormat.parse(birthdayString);
