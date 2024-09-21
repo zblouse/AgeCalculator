@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
+    android:background="@color/white"
     tools:context=".MainActivity">
     <TextView
         android:id="@+id/pagelabel"
@@ -20,28 +21,28 @@
         android:id="@+id/firstname"
         android:hint="First Name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:inputType="text"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
         android:layout_below="@id/pagelabel"
     />
     <EditText
         android:id="@+id/lastname"
         android:hint="Last Name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/firstname"
         android:inputType="text"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
     />
     <EditText
         android:id="@+id/birthday"
         android:hint="Birth day"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/lastname"
         android:inputType="text"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
     />
     <Button
         android:layout_width="match_parent"
